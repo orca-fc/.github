@@ -33,7 +33,7 @@
 
 ## 서비스 구성
 
-### API Gateway
+### [API Gateway](https://github.com/orca-fc/api-gateway)
 
 - **역할**
     - 모든 클라이언트 요청의 진입점(Front Controller) 역할을 수행하며, 각 마이크로서비스로 요청 라우팅
@@ -44,7 +44,7 @@
     - Dev / Prod 환경별로 네임스페이스를 분리하여 라우팅 관리
     - API Gateway는 NodePort로 외부에 노출, 나머지 서비스는 ClusterIP로 설정하여 private하게 관리, 오직 API Gateway를 통해서만 요청이 전달되도록 격리
 
-### Auth Service
+### [Auth Service](https://github.com/orca-fc/auth)
 
 - **역할**
     - 사용자 인증 관리
@@ -53,15 +53,17 @@
     - JWT 토큰 발급 및 검증
     - 토큰 재발급
 
-### Player Service
+### [Player Service](https://github.com/orca-fc/player)
 
 - **역할**
     - 선수 정보 관리
 - **기능**
     - 선수 등록 및 정보 수정
     - 클럽 가입 신청 현황 조회
+      
+<img width="1472" alt="Image" src="https://github.com/user-attachments/assets/8d20a92a-c236-4d19-8e42-dddd035c4350" />
 
-### Club Service
+### [Club Service](https://github.com/orca-fc/club)
 
 - **역할**
     - 클럽 관리
@@ -69,8 +71,10 @@
     - 클럽 생성 및 정보 수정
     - 클럽 가입 신청 관리 (승인 / 거절)
     - 클럽 소속 선수단 관리
+ 
+<img width="1442" alt="Image" src="https://github.com/user-attachments/assets/86de8934-1e85-44b6-bf5f-29f113432dd3" />
 
-### Match Service
+### [Match Service](https://github.com/orca-fc/match)
 
 - **역할**
     - 클럽 간 매칭 및 경기 결과 관리
@@ -79,7 +83,9 @@
     - 경기 결과 기록
     - 상대 클럽 평가
 
-### Chat Service
+<img width="1469" alt="Image" src="https://github.com/user-attachments/assets/7283a15e-1b7e-4a82-b975-8791bdaa7697" />
+
+### [Chat Service](https://github.com/orca-fc/chat)
 
 - **역할**
     - 채팅 서비스 제공
